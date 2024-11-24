@@ -47,22 +47,13 @@ public class Task {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, id, description, status);
+        return Objects.hash(id);
     }
 
     @Override
     public String toString() {
         return "Task{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
-                ", description='" + description + '\'' +
-                ", status=" + status +
+                "id=" + id +
                 '}';
-    }
-
-    public enum TaskStatus {
-        NEW,
-        IN_PROGRESS,
-        DONE
     }
 }
