@@ -20,4 +20,8 @@ public class Subtask extends Task {
                 ", status=" + status +
                 '}';
     }
+
+    public void setEpicId(int i) {
+        this.epicId = i;
+    }
 }

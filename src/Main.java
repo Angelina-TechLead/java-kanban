@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        TaskManager manager = new TaskManager();
+        TaskManager manager = new InMemoryTaskManager();
 
         Task task1 = new Task("Task 1", "Description 1", 0, TaskStatus.NEW);
         Task task2 = new Task("Task 2", "Description 2", 0, TaskStatus.NEW);
