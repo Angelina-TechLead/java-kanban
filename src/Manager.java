@@ -7,8 +7,8 @@ public class Manager {
         return new InMemoryTaskManager();
     }
 
-    public static HistoryManager getDefaultHistory(int i) {
-        return getDefaultHistory (10);
+    public static HistoryManager getDefaultHistory() {
+        return getDefaultHistory ();
     }
     public static List<Task> getHistory() {
         return historyManager.getHistory();
