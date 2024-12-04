@@ -6,7 +6,7 @@ public class Task {
     protected String description;
     protected TaskStatus status;
 
-    public Task(String name, String description, int id, TaskStatus status) {
+    public Task(String name, String description, TaskStatus status) {
         this.name = name;
         this.description = description;
         this.id = id; // добавление инициализации идентификатора

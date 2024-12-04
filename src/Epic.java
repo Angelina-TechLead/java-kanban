@@ -5,7 +5,7 @@ public class Epic extends Task {
     private List<Subtask> subtasks;
 
     public Epic(String name, String description, int id, TaskStatus status) {
-        super(name, description, id, status); // передача параметра id в базовый конструктор
+        super(name, description, status); // передача параметра id в базовый конструктор
         this.subtasks = new ArrayList<>();
     }
 

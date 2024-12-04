@@ -13,7 +13,7 @@ public class InMemoryTaskManagerTest {
 
     @Test
     public void shouldAddAndRetrieveDifferentTasks() {
-        Task task = new Task("Task", "Description", 1, TaskStatus.NEW);
+        Task task = new Task("Task", "Description", TaskStatus.NEW);
         Epic epic = new Epic("Epic", "Description", 2, TaskStatus.NEW);
         Subtask subtask = new Subtask("Subtask", "Description", 3, TaskStatus.NEW, 2);
 
@@ -28,7 +28,7 @@ public class InMemoryTaskManagerTest {
 
     @Test
     public void shouldMaintainTaskHistory() {
-        Task task = new Task("Task", "Description", 1, TaskStatus.NEW);
+        Task task = new Task("Task", "Description", TaskStatus.NEW);
         taskManager.addTask(task);
 
         taskManager.getTask(1);
@@ -40,16 +40,16 @@ public class InMemoryTaskManagerTest {
 
     @Test
     public void shouldNotModifyTaskOnAddition() {
-        Task task = new Task("Task", "Description", 1, TaskStatus.NEW);
-        Task originalTask = new Task("Task", "Description", 1, TaskStatus.NEW);
+        Task task = new Task("Task", "Description", TaskStatus.NEW);
+        Task originalTask = new Task("Task", "Description", TaskStatus.NEW);
         taskManager.addTask(task);
         assertEquals(originalTask, task, "Неизменяется задача");
     }
 
     @Test
     public void shouldNotConflictGeneratedAndAssignedIds() {
-        Task task1 = new Task("Task 1", "Description 1", 1, TaskStatus.NEW);
-        Task task2 = new Task("Task 2", "Description 2", 2, TaskStatus.NEW);
+        Task task1 = new Task("Task 1", "Description 1", TaskStatus.NEW);
+        Task task2 = new Task("Task 2", "Description 2", TaskStatus.NEW);
         taskManager.addTask(task1);
         taskManager.addTask(task2);
 
