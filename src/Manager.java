@@ -10,8 +10,4 @@ public class Manager {
     public static HistoryManager getDefaultHistory() {
         return getDefaultHistory ();
     }
-    public static List<Task> getHistory() {
-        return historyManager.getHistory();
-   }
-
 }
